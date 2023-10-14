@@ -1,9 +1,9 @@
-const random = (): number => Math.floor(Math.random() * 123) + 1;
 
-export const RandomFox = (): JSX.Element => { //Esta es la estructura del componente que se sugiere usar
-    const image: string = `https://randomfox.ca/images/${random()}.jpg`;
 
-    return <img width={320} height="auto" src={image} className="rounded" />
+type RandomFoxProps = { image: string, alt: string }
+
+export const RandomFox = ({ image, alt }: RandomFoxProps): JSX.Element => { //Esta es la estructura del componente que se sugiere usar
+    return <img width={320} height="auto" src={image} className="rounded" alt={alt} />
 };
 
 /* const RandomFox: FunctionComponent = () => {
