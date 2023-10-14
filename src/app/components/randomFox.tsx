@@ -1,5 +1,3 @@
-
-
 type RandomFoxProps = { image: string, alt: string }
 
 export const RandomFox = ({ image, alt }: RandomFoxProps): JSX.Element => { //Esta es la estructura del componente que se sugiere usar
