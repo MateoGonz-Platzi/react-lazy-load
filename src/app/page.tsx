@@ -2,7 +2,7 @@
 import { useState } from "react";
 import type { MouseEventHandler } from "react";
 import Head from "next/head";
-import { RandomFox } from "./components/randomFox";
+import { LazyImage } from "./components/lazyImage";
 import type { NextPage } from "next";
 
 type ImageItem = { id: string, url: string };
@@ -44,7 +44,7 @@ const Home: NextPage = () => {
 
         {images.map(({ id, url }) => (
           <div key={id} className="p-4">
-            <RandomFox alt={"foxImage"} image={url} />
+            <LazyImage alt={"foxImage"} image={url} />
           </div>
         ))}
       </main>
