@@ -44,7 +44,7 @@ const Home: NextPage = () => {
 
         {images.map(({ id, url }) => (
           <div key={id} className="p-4">
-            <LazyImage alt={"foxImage"} image={url} />
+            <LazyImage alt={"foxImage"} src={url} onClick={() => console.log('LazyLoad, clicked !')} />
           </div>
         ))}
       </main>
