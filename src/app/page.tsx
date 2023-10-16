@@ -5,8 +5,6 @@ import Head from "next/head";
 import { LazyImage } from "./components/lazyImage";
 import type { NextPage } from "next";
 
-type ImageItem = { id: string, url: string };
-
 const random = (): number => Math.floor(Math.random() * 123) + 1;
 
 //generate function to random id with uuid
@@ -21,11 +19,11 @@ const generateUuid = (): string => {
 }
 
 const Home: NextPage = () => {
-  const [images, setImages] = useState<Array<ImageItem>>([]);
+  const [images, setImages] = useState<Array<IFoxImageItem>>([]);
 
   const addNewFox: MouseEventHandler<HTMLButtonElement> = (event) => {
     event.preventDefault();
-    const newImage: ImageItem = { id: generateUuid(), url: `https://randomfox.ca/images/${random()}.jpg` };
+    const newImage: IFoxImageItem = { id: generateUuid(), url: `https://randomfox.ca/images/${random()}.jpg` };
     setImages([...images, newImage]);
   }
 
